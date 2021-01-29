@@ -54,7 +54,7 @@ h1 {
   margin: 16px 0;
 }
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
@@ -169,7 +169,7 @@ button {
   margin-bottom: 16px;
 }
 .major_icon i {
-  transition: all var(--annimation-uration) ease;
+  transition: all var(--annimation-duration) ease;
 }
 .major_icon:hover i {
   color: var(--color-pink);
@@ -336,4 +336,25 @@ button {
   margin-left: -12px;
   margin-top: 8px;
   background-color: var(--color-dark-white);
+}
+#contact {
+  background-color: var(--color-pink);
+}
+.contact_tilte,
+.contact_email,
+.contact_rights {
+  color: var(--color-white);
+}
+
+.contact_tilte {
+  margin: 32px 0;
+}
+.contact_links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+  transition: all var(--annimation-duration) ease-in;
+}
+.contact_links i:hover {
+  transform: scale(1.2);
+  color: var(--color-black);
 }
