@@ -18,17 +18,28 @@ navbar.addEventListener('click',(event)=>{
     const target = event.target;
     const  link = target.dataset.link;
     if(link == null){return;}
-
-    console.log(event.target.dataset.link); 
     scrollIntoView(link);
 });
 //Contact me btn 누르면 스크롤
 const contactMe_Btn =  document.querySelector('.home_contact');
 contactMe_Btn.addEventListener('click',(event)=>{
     scrollIntoView('#contact');
+});
+
+//스크롤하면 home의 요소들이 fade
+const home = document.querySelector('.home_container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll',()=>{
+    const fade = 1 - window.scrollY / homeHeight;
+    home.style.opacity = fade;
+    
 })
+
+
+
+
 
 function scrollIntoView(selector) {
     const scrollTo=document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:'smooth'});
-}
+};
