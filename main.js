@@ -11,15 +11,23 @@ document.addEventListener('scroll',()=>{
     }
 });
 
+
 // 메뉴 클릭하면 원하는곳으로 스크롤링
 const navbarmenu =  document.querySelector('.navbar_menu');
-navbar.addEventListener('click',(event)=>{
+navbarmenu.addEventListener('click',(event)=>{
       
     const target = event.target;
     const  link = target.dataset.link;
     if(link == null){return;}
+    navbarmenu.classList.remove('open');
     scrollIntoView(link);
 });
+
+const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
+navbarToggleBtn.addEventListener('click',()=>{
+    navbarmenu.classList.toggle('open');
+})
+
 //Contact me btn 누르면 스크롤
 const contactMe_Btn =  document.querySelector('.home_contact');
 contactMe_Btn.addEventListener('click',(event)=>{
@@ -57,6 +65,11 @@ workBtnContainer.addEventListener('click',(e)=>{
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
     if(filter == null){return;}
 
+    //버튼 클릭시 색 변경
+    const active = document.querySelector('.category_btn.selected');
+    active.classList.remove('selected');
+    const target=e.target.nodeName==='BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected');
     projectcontainer.classList.add('anum-out');
 
     setTimeout(()=>{

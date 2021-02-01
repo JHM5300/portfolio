@@ -87,42 +87,43 @@ button {
   background-color: transparent;
   align-items: center;
   color: var(--color-white);
-  padding: 16px;
   transition: all var(--annimation-duration) ease-in-out;
   z-index: 1;
 }
+
 #navbar.navbar-dark {
   background-color: var(--color-grey);
-  padding: 8px;
 }
-
+.navbar_menu1,
 .navbar_menu {
   display: flex;
 }
+
 .navbar_menu_item {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--Size-border-radius);
+  border: 1px solid transparent;
+  border-radius: var(--Size-border-radius);
+}
+.navbar_menu_item:hover {
+  border-color: var(--color-white);
+  background-color: var(--color-dark-grey);
 }
 .navbar_icon {
-  width: 50px;
-  height: 50px;
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
 }
 .navbar_logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
-.navbar_menu_item.active {
-  border: 1px solid var(--color-white);
-}
-.navbar_menu_item:hover {
-  background-color: var(--color-dark-grey);
-}
 
 .navbar_toggle-btn {
   position: absolute;
-  top: 44px;
+  top: 5px;
   right: 32px;
   font-size: 24px;
   color: var(--color-white);
@@ -281,12 +282,12 @@ button {
   font-size: var(--font-regular);
   padding: 8px 48px;
 }
-.category_btn.active,
+.category_btn.selected,
 .category_btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
 }
-.category_btn.active .category_count,
+.category_btn.selected .category_count,
 .category_btn:hover .category_count {
   opacity: 1;
   top: 0;
@@ -314,7 +315,7 @@ button {
 }
 .work_projects.anum-out {
   opacity: 0.6;
-  transform: scale(0.9) translateY(40px);
+  transform: scale(0.96) translateY(40px);
 }
 .project {
   position: relative;
@@ -353,16 +354,16 @@ button {
   transform: translateY(0px);
 }
 .project_description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 .project_description h3:after {
-  content: ;
+  content: "";
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 50px;
   height: 2px;
-  margin-left: -12px;
+  transform: translateX(-50%);
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
@@ -396,7 +397,7 @@ button {
   height: 70px;
   bottom: 50px;
   right: 50px;
-  color: var(--color-dark-grey);
+  color: var(--color-blue);
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
@@ -414,12 +415,18 @@ button {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-grey);
   }
+  .navbar_menu1,
   .navbar_menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
     display: none;
+  }
+  .navbar_menu1,
+  .navbar_menu.open {
+    display: block;
   }
   .about_majors {
     flex-direction: column;
