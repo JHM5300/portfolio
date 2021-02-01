@@ -51,7 +51,7 @@ h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
-  margin: 16px 0;
+  margin: 32px 0;
 }
 h2 {
   font-size: var(--font-medium);
@@ -169,7 +169,7 @@ button {
   background-color: var(--color-white);
   align-items: center;
   color: var(--color-black);
-  padding: 16px;
+
   max-width: 1200px;
 }
 .about_majors {
@@ -379,6 +379,25 @@ button {
   transform: scale(1.2);
   color: var(--color-black);
 }
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  bottom: 50px;
+  right: 50px;
+  color: var(--color-dark-grey);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media screen and (max-width: 768px) {
   .navbar_toggle-btn {
     display: block;

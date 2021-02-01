@@ -35,9 +35,19 @@ document.addEventListener('scroll',()=>{
     
 })
 
-
-
-
+//Arrow up 스크롤링 하면 나타나게함.
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll',()=>{
+    if(window.scrollY > homeHeight /2 ){
+        arrowUp.classList.add('visible');
+    }else{
+        arrowUp.classList.remove('visible')
+    }
+})
+//arrow up 누르면 home으로 이동
+arrowUp.addEventListener('click',()=>{
+    scrollIntoView('#home');
+})
 
 function scrollIntoView(selector) {
     const scrollTo=document.querySelector(selector);
