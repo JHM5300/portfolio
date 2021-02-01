@@ -20,6 +20,15 @@ navbar.addEventListener('click',(event)=>{
     if(link == null){return;}
 
     console.log(event.target.dataset.link); 
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior:'smooth'});
+    scrollIntoView(link);
+});
+//Contact me btn 누르면 스크롤
+const contactMe_Btn =  document.querySelector('.home_contact');
+contactMe_Btn.addEventListener('click',(event)=>{
+    scrollIntoView('#contact');
 })
+
+function scrollIntoView(selector) {
+    const scrollTo=document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior:'smooth'});
+}
