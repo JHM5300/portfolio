@@ -169,21 +169,25 @@
             <h1>My work</h1>
         <h2>Projects</h2>
         <div class="work_categories">
-            <button class="category_btn active">
-                All <span class="category_count">2</span>
+            <button class="category_btn active"data-filter="*">
+                All <span class="category_count">1</span>
             </button>
-            <button class="category_btn ">
-                Front-end <span class="category_count">1</span>
+            <button class="category_btn " data-filter="front-end">
+                Front-end <span class="category_count">0</span>
             </button>
-            <button class="category_btn ">
+            <button class="category_btn " data-filter="front-end">
+                Back-end <span class="category_count">0</span>
+            </button>
+            <button class="category_btn " data-filter="mobile">
                 Mobile <span class="category_count">1</span>
             </button>
         </div>
-
+<!-- 프로젝트 넣는 구간 -->
         <div class="work_projects">
             <a href="https://github.com/JHM5300/BookStore" 
             class="project" 
             target="blank"
+            data-type="mobile"
             >
             <img class = "project_img" 
             src="imgs/project/BookStoreProject.jpg" 
@@ -194,12 +198,9 @@
             </div>
             </a>
         </div>
+<!-- 프로젝트 넣는 구간 끝 -->
+
         </div>
-    </section>
-
-    <!-- Testimnials -->
-    <section id="testimonials" class="section">
-
     </section>
 
     <!-- Contact -->
