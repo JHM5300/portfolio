@@ -36,23 +36,28 @@
         </button>
     </nav>
     <!-- Home -->
-    <section id="home"> 
+    <section id="home">  
        <div class="home_container">
-        <img
+  
+        <img 
         src="imgs/profile.jpg"
         alt="JHM's profile photo"
         class="home_avatar"
         />
-        <h1 class="home_title">안녕하세요,<br/>저는 전해명입니다.</h1>
-        <h2 class="home_description">창작활동을 즐기는 프론트엔드 개발자입니다.</h2>
+        
+        <h1 class="home_title">안녕하세요,<br/>저는 프론트엔드 개발자 <br>전해명입니다.</h1>
+        <h2 class="home_description">성장해가는 프론트 엔드 개발자</h2>
+        
         <button class="home_contact" data-link="#contact">CONTACT ME</button>
-       </div>
+        
+        
+        </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
         <h1>About me</h1>
-        <p>창작활동을 즐기는 프론트엔드 개발자입니다.</p>
+        <p>꾸준히 성장해가는 모습을 보여 드리겠습니다.</p>
         <div class="about_majors">
             <div class="major">
             <div class="major_icon">
@@ -92,16 +97,64 @@
             </div>
         </div>
     </section>
-
-    <!-- Skills -->
     <section id="skills" class="section">
         <div class="section_container">
-            <h1>Skills</h1>
-            <h2>Skills & Attributes</h2>
-            <p>새로운것에 배우는것에 관심이 많고 스트레스에도 잘견디는 편이다.</p>
+            <h1>Study</h1>
+            <p class="show1">저는 새로운 것에 배우는 것에 관심이 많아서 스스로 찾아보고 해결하려고 합니다.</p>
+            <p class="show2">특정 스트레스에도 잘 견디는 편이고 혼자서든 팀 활동이든 잘 잘 나아갈 수 있는 능력이 있다고 생각합니다.</p>
+            <p class="show3">인터넷 강의 같은 것도 듣는 것을 즐기며 1강의 1 프로젝트를 만들어 보려고 노력합니다.</p>
+            
+            <h2 class="show4">Study list</h2>
+            <p class="show5">저는 현재 이런 공부를 합니다.</p>
+            <div class="about_majors">
+                <div class="major">
+                <div class="skills_icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h2 class="skills_title">HTML</h2>
+                </div>
+    
+                <div class="major">
+                <div class="skills_icon">
+                    <i class="fab fa-css3"></i>
+                </div>
+                <h2 class="skills_title">CSS3</h2>
+                </div>
+    
+                <div class="major">
+                    <div class="skills_icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h2 class="skills_title">Javascript</h2>
+                </div>
+
+                <div class="major">
+                    <div class="skills_icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h2 class="skills_title">Mobile</h2>
+                </div>
+
+                <div class="major">
+                    <div class="skills_icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h2 class="skills_title">React</h2>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Skills -->
+   <!-- <section id="skills" class="section">
+        <div class="section_container">
+            <h1>Study</h1>
+            <h2>Study list</h2>
+            <p>저는 새로운것에 배우는것에 관심이 많아서 스스로 찾아보고 해결하려고 합니다.특정 스트레스에도 잘견디는 편이고 혼자서든 팀 활동이든 잘 잘나아갈수있는 능력이 있다고 생각합니다.</p>
+            <p>인터넷 강의 같은것도 듣는 것을 즐기며 1강의 1프로젝트를 만들어 보려고 노력합니다.</p>
             <div class="skillset">
                 <div class="skillset_left">
-                    <h3 class="skillset_title">Skills</h3>
+                    <h3 class="skillset_title">Study</h3>
                     <div class="skill">
                         <div class="skill_description">
                             <span>HTML</span>
@@ -161,7 +214,7 @@
             </div>
         </div>
         
-    </section>
+    </section>-->
 
     <!-- Work -->
     <section id="work" class="section">
@@ -173,32 +226,78 @@
                 All <span class="category_count">1</span>
             </button>
             <button class="category_btn " data-filter="front-end">
-                Front-end <span class="category_count">0</span>
+                Front-end <span class="category_count">1</span>
             </button>
-            <button class="category_btn " data-filter="front-end">
+            <button class="category_btn " data-filter="back-end">
                 Back-end <span class="category_count">0</span>
             </button>
             <button class="category_btn " data-filter="mobile">
                 Mobile <span class="category_count">1</span>
             </button>
+            <button class="category_btn " data-filter="study">
+                study <span class="category_count">1</span>
+            </button>
         </div>
-<!-- 프로젝트 넣는 구간 -->
+
         <div class="work_projects">
+            <!-- 프로젝트 넣는 구간 -->
+            <a href="https://github.com/JHM5300/VJSchrome.github.io" 
+            class="project" 
+            target="blank"
+            data-type="front-end"
+            >
+            <img class = "project_img" 
+            src="imgs/project/chrom.png" 
+            alt="BookStore">
+            <div class="project_description">
+                <h3>크롬 웹 To-Do-List</h3>
+                <span class="project_explanation">
+                    크롬 웹 클론 코딩 <br>
+                    기능 : 시계, 배경화면, 할일목록, 날씨<br>
+                    Tool: Visual Studio Code<br> 
+                    Code : HTML, CSS3, JS<br></span>
+            </div>
+            </a>
+
             <a href="https://github.com/JHM5300/BookStore" 
             class="project" 
             target="blank"
             data-type="mobile"
             >
             <img class = "project_img" 
-            src="imgs/project/BookStoreProject.jpg" 
+            src="imgs/project/book.png" 
             alt="BookStore">
             <div class="project_description">
                 <h3>BookStore</h3>
-                <span>졸업작품으로 만든 학교 구내서점 쇼핑 앱 Tool : Android Studio Code : java</span>
+                <span class="project_explanation">
+                    졸업작품으로 만든 학교 구내서점 쇼핑 앱<br>
+                    기능 : 판매 도서 리스트 시각화,장바구니 기능, 책 검색, 중고 게시판(글 작성, 수정 , 삭제) <br>                 
+                    Tool : Android Studio<br> 
+                    Code : java<br></span>
             </div>
             </a>
+
+            <a href="https://github.com/JHM5300/noMadCoders" 
+            class="project" 
+            target="blank"
+            data-type="study"
+            >
+            <img class = "project_img" 
+            src="imgs/project/Task8.PNG" 
+            alt="BookStore">
+            <div class="project_description">
+                <h3>계산기, 간단한 숫자 맞추기 게임 등
+                </h3>
+                <span class="project_explanation">
+                    유튜버이자 풀스택 개발자인 노마드 코더의 인터넷 강의 및 챌린지 <br>
+                    Tool : Android Studio<br> 
+                    Code : HTML,CSS3,JS</span>
+            </div>
+            </a>
+            <!-- 프로젝트 넣는 구간 끝 -->
         </div>
-<!-- 프로젝트 넣는 구간 끝 -->
+        
+
 
         </div>
     </section>

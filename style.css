@@ -40,7 +40,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-black);
 }
 ul {
   list-style: none;
@@ -86,13 +86,16 @@ button {
   justify-content: space-between;
   background-color: transparent;
   align-items: center;
-  color: var(--color-white);
+  color: var(--color-black);
   transition: all var(--annimation-duration) ease-in-out;
   z-index: 1;
 }
-
+#navbar.navbar-dark a {
+  color: var(--color-white);
+}
 #navbar.navbar-dark {
   background-color: var(--color-grey);
+  color: var(--color-white);
 }
 .navbar_menu1,
 .navbar_menu {
@@ -132,10 +135,17 @@ button {
 
 /* Home */
 #home {
-  background: url(imgs/home/home.png) center/cover no-repeat;
-  padding: 40px;
   padding-top: 100px;
+  /* background: url(imgs/home/home4.png) center/cover no-repeat; */
   text-align: center;
+  background-color: #ece9e4;
+}
+
+.background_img {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
 }
 .home_avatar {
   width: 300px;
@@ -143,17 +153,21 @@ button {
   border-radius: 80%;
   border: 2px solid var(--color-white);
 }
+
 .home_title,
 .home_description {
-  color: var(--color-dark-grey);
+  color: var(--color-black);
 }
 .home_contact {
-  color: var(--color-grey);
+  color: var(--color-black);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin: 24px;
   padding: 8px 12px;
   border: 2px solid var(--color-grey);
+}
+.home_contact:hover {
+  background-color: var(--color-light-grey);
 }
 /* Section common */
 .section {
@@ -178,6 +192,7 @@ button {
   justify-content: space-between;
   margin: 80px 0;
 }
+.skills_icon,
 .major_icon {
   width: 170px;
   height: 170px;
@@ -189,6 +204,7 @@ button {
   border-radius: 50%;
   margin-bottom: 16px;
 }
+
 .major_icon i {
   transition: all var(--annimation-duration) ease;
 }
@@ -196,6 +212,24 @@ button {
   color: var(--color-pink);
   transform: rotate(-30deg) scale(1.1);
 }
+.skills_icon i {
+  transition: all var(--annimation-duration) ease;
+}
+.skills_icon:hover i {
+  color: var(--color-pink);
+  transform: scale(1.3);
+}
+
+.major:hover .skills_title {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.skills_title {
+  opacity: 0;
+  transition: all var(--annimation-duration) ease-in;
+}
+
 .major_title,
 .major_description {
   color: var(--color-dark-grey);
@@ -228,6 +262,23 @@ button {
 .job_period {
   font-size: var(--fint-micro);
 }
+
+#study {
+  background-color: wheat;
+}
+.icon_box {
+  display: inline;
+}
+
+.show1,
+.show2,
+.show3,
+.show4,
+.show5 {
+  transition: all var(--annimation-duration) ease-in;
+  opacity: 0;
+}
+
 #skills {
   background-color: var(--color-yellow);
 }
@@ -281,6 +332,7 @@ button {
   border-radius: var(--Size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 .category_btn.selected,
 .category_btn:hover {
@@ -300,9 +352,9 @@ button {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--annimation-duration) ease-in;
 }
@@ -355,6 +407,9 @@ button {
 }
 .project_description h3 {
   color: var(--color-orange);
+}
+.project_explanation {
+  color: var(--color-white);
 }
 .project_description h3:after {
   content: "";
@@ -409,6 +464,13 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --fint-micro: 12px;
+  }
   .navbar_toggle-btn {
     display: block;
   }
@@ -428,16 +490,37 @@ button {
   .navbar_menu.open {
     display: block;
   }
+  .home_avatar {
+    width: 170px;
+    height: 170px;
+  }
+  .section {
+    padding: 16px;
+  }
   .about_majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
   .skillset {
     flex-direction: column;
   }
+  .category_btn {
+    margin: 4px 0;
+    width: 100%;
+  }
   .project {
     flex-grow: 1;
+  }
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
   }
 }

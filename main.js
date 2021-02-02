@@ -41,7 +41,33 @@ document.addEventListener('scroll',()=>{
     const fade = 1 - window.scrollY / homeHeight;
     home.style.opacity = fade;
     
+});
+//study text show
+const skills = document.querySelector('#skills');
+const show1 = document.querySelector('.show1');
+const show2 = document.querySelector('.show2');
+const show3 = document.querySelector('.show3');
+const show4 = document.querySelector('.show4');
+const show5 = document.querySelector('.show5');
+skills.addEventListener('mouseover',()=>{
+    const show = setTimeout(()=>{
+        show1.style.opacity = 1;
+        setTimeout(()=>{
+            show2.style.opacity = 1;
+        },1000)
+        setTimeout(()=>{
+            show3.style.opacity = 1;
+        },2000)
+        setTimeout(()=>{
+            show4.style.opacity = 1;
+            show5.style.opacity = 1;
+        },3000)
+    },1000)
+    
+    
 })
+
+
 
 //Arrow up 스크롤링 하면 나타나게함.
 const arrowUp = document.querySelector('.arrow-up');
